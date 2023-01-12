@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+  
+  
+  client:
+    build: 
+      context: ./client
+      args:
+        - API_URL=http://ec2-54-178-198-102.ap-northeast-1.compute.amazonaws.com:3000
+    image: client
+    command: npm run serve
+    ports:
+      - "3000" #:${REACT_PORT}"
